@@ -222,7 +222,7 @@ function updateDealField(dealId, callFailedCode, callDuration, callstartdate, re
 }
 
 // Lắng nghe trên cổng 3000
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const PORT = process.env.PORT || 3000; // Lấy PORT từ môi trường nếu có
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running at http://0.0.0.0:${PORT}/`);
 });
